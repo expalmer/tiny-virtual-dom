@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "test": "mocha",
+    "todo:start": "cd examples/todo && browser-sync start --server --files='index.html, bundle.js'",
+    "todo:watch": "watchify examples/todo/index.js -o examples/todo/bundle.js -t [ babelify --plugins [transform-react-jsx] ] -d",
+    "build": "browserify --standalone tiny-virtual-dom lib/index.js > dist/tiny-virtual-dom.js"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "watchify": "^3.9.0"
+  }
+}

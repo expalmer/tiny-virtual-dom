@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 100%;
+  font-family: 'Roboto Slab', serif;
+  color: rgb(50, 48, 57);
+  background: linear-gradient(to right, #f9f9f9 0%,#f9f9f9 40%,#f9f9f9 100%);
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: #d4d4d8;
+  font-style: italic;
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+  color: #e34;
+  text-shadow: 0px 2px #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.insert {
+  margin: 0 auto;
+  max-width: 600px;
+  background: #fff;
+  border-bottom: solid 1px #eee;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.insert input {
+  padding-left: 24px;
+  width: 100%;
+  height: 54px;
+  border: none;
+  outline: none;
+  font-size: 23px;
+  font-family: inherit;
+  color: rgb(50, 48, 57);
+  border-radius: 10px;
+  background: transparent;
+}
+
+.list {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.list:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 21px;
+  overflow: hidden;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #fff, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 17px 0 -6px #fff, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.list li {
+  position: relative;
+  padding: 10px 20px;
+  border-bottom: solid 1px #eee;
+  list-style: none;
+  overflow: hidden;
+}
+
+.list li:hover .destroy {
+  display: inline-block;
+}
+
+.todo span {
+  display: block;
+  margin-left: 12px;
+  font-size: 1.2em;
+  transition: color 0.3s ease-out;
+}
+
+.done.todo span {
+  text-decoration: line-through;
+  color: #d4d4d8;
+}
+
+.destroy {
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: 0;
+  border: none;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  z-index: 2;
+  outline: none;
+}
+
+.destroy:before,
+.destroy:after {
+  content: '';
+  position: absolute;
+  top: 12.5px;
+  left: 24px;
+  width: 3px;
+  height: 25px;
+  background: #EE1630;
+  opacity: 0;
+  transition: all .5s ease-out;
+  transform: rotateZ(45deg);
+  cursor: pointer;
+}
+
+.destroy:after {
+  left: 25px;
+  transform: rotateZ(-45deg);
+}
+
+.list li:hover .destroy:before,
+.list li:hover .destroy:after  {
+  opacity: 1;
+  height: 25px;
+}
+
+.destroy:hover:before,
+.destroy:hover:after {
+  box-shadow: 0 0px 1px #ee0000;
+}
+
+.total {
+  margin: 24px auto;
+  max-width: 600px;
+}
+.total li {
+  list-style: none;
+}
