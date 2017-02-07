@@ -1,4 +1,8 @@
 {
+  "name": "tiny-virtual-dom",
+  "version": "0.0.1",
+  "description": "Just a tiny virtual dom implementation",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
     "todo:start": "cd examples/todo && browser-sync start --server --files='index.html, bundle.js'",
@@ -14,5 +18,11 @@
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "watchify": "^3.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expalmer/tiny-virtual-dom.git"
+  },
+  "author": "Palmer Oliveira",
+  "license": "MIT"
 }

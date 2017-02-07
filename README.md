@@ -99,8 +99,8 @@ setTimeout(() => {
 
 ## See the examples:
 
-- [Sample](examples/sample)
-- [To Do List](examples/todo)
+- [Sample](examples/sample/index.js)
+- [To Do List](examples/todo/index.js)
 
 
 ## Tests
