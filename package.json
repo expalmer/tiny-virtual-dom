@@ -7,16 +7,20 @@
     "test": "mocha",
     "todo:start": "cd examples/todo && browser-sync start --server --files='index.html, bundle.js'",
     "todo:watch": "watchify examples/todo/index.js -o examples/todo/bundle.js -t [ babelify --plugins [transform-react-jsx] ] -d",
+    "test:start": "cd examples/test && browser-sync start --server --files='index.html, bundle.js'",
+    "test:watch": "watchify examples/test/index.js -o examples/test/bundle.js -t [ babelify --plugins [transform-react-jsx] ] -d",
     "build": "browserify --standalone tiny-virtual-dom lib/index.js > dist/tiny-virtual-dom.js"
   },
   "dependencies": {
     "chai": "^3.5.0",
+    "global": "^4.3.1",
     "mocha": "^3.2.0"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.22.0",
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
+    "jsdom": "^9.10.0",
     "watchify": "^3.9.0"
   },
   "repository": {

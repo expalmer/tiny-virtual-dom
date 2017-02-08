@@ -1,4 +1,4 @@
-const { assert } = require('chai');
+const { assert, should } = require('chai');
 const { h, patch } = require('../lib');
 
 describe('h function', () => {
@@ -109,4 +109,3 @@ describe('h function', () => {
   });
 
 });
-

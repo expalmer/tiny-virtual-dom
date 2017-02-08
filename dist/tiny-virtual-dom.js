@@ -32,6 +32,8 @@ module.exports = {
   head,
 }
 },{}],2:[function(require,module,exports){
+const document = require("global/document");
+
 const {
   isArray,
   isObject,
@@ -147,5 +149,26 @@ module.exports = {
   patch: patch
 };
 
-},{"./helpers":1}]},{},[2])(2)
+},{"./helpers":1,"global/document":4}],3:[function(require,module,exports){
+
+},{}],4:[function(require,module,exports){
+(function (global){
+var topLevel = typeof global !== 'undefined' ? global :
+    typeof window !== 'undefined' ? window : {}
+var minDoc = require('min-document');
+
+if (typeof document !== 'undefined') {
+    module.exports = document;
+} else {
+    var doccy = topLevel['__GLOBAL_DOCUMENT_CACHE@4'];
+
+    if (!doccy) {
+        doccy = topLevel['__GLOBAL_DOCUMENT_CACHE@4'] = minDoc;
+    }
+
+    module.exports = doccy;
+}
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"min-document":3}]},{},[2])(2)
 });
