@@ -7,8 +7,8 @@
     "test": "mocha",
     "todo:start": "cd examples/todo && browser-sync start --server --files='index.html, bundle.js'",
     "todo:watch": "watchify examples/todo/index.js -o examples/todo/bundle.js -t [ babelify --plugins [transform-react-jsx] ] -d",
-    "test:start": "cd examples/test && browser-sync start --server --files='index.html, bundle.js'",
-    "test:watch": "watchify examples/test/index.js -o examples/test/bundle.js -t [ babelify --plugins [transform-react-jsx] ] -d",
+    "test:start": "cd examples/test && browser-sync start --server --files='index.html, bundle.js, style.css'",
+    "test:watch": "watchify examples/cards/index.js -o examples/cards/bundle.js -t [ babelify --plugins [transform-react-jsx] ] -d",
     "build": "browserify --standalone tiny-virtual-dom lib/index.js > dist/tiny-virtual-dom.js"
   },
   "dependencies": {

@@ -102,10 +102,10 @@ describe('h function', () => {
         'Hello',
       ]
     };
-    const ele = function() {
+    const ele = () => {
       return h('p', { style: { background: '#000', color: '#fff'} }, 'Hello');
     };
     assert.deepEqual(res, h(ele));
   });
-
+  
 });
